@@ -36,7 +36,10 @@
                 <td><?= $space['location'] ?></td>
                 <td><?= $space['capacity'] ?></td>
                 <td>
-                    <a href="edit.php?id=<?= $space['id'] ?>">Editar</a>
+                    <a href="edit.php?id=<?= $space['id'] ?>">Editar</a> | 
+                    <a href="delete.php?id=<?= $space['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir este espaço?')">
+                        Excluir
+                    </a>
                 </td>
             </tr>
             <?php endforeach; ?>
