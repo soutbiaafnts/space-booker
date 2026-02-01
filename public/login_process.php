@@ -18,16 +18,16 @@ try {
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    /*! comparação direta temporária */
-    if ($user && $password === $user['password']) {
+
+    if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         header("Location: dashboard.php");
         exit();
     }
 
-    header('Location: login.php?error=1');
+    header('Location: login.php?error=wrongPassword');
     exit();
 } catch (Exception $e) {
-    header('Location: login.php?error=1');
+    header('Location: login.php?error=internal');
     exit();
 }

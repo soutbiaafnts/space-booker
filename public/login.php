@@ -19,7 +19,7 @@
             <input type="password" id="password" name="password" required><br>
             <input type="submit" value="Entrar">
         </form>
-        <a href="">Não tem conta? Cadastre-se</a>
+        <a href="../modules/users/create.php">Não tem conta? Cadastre-se</a>
         <?php if(isset($_GET['error'])) { ?>
                 <p>Email ou senha incorretos.</p>
         <?php } ?>
