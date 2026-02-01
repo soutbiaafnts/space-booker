@@ -38,7 +38,8 @@
                     <td><?= $user['role'] ?></td>
                     <td><?= $user['created_at'] ?></td>
                     <td>
-                        <a href="edit.php?id=<?= $user['id'] ?>">Editar</a>
+                        <a href="edit.php?id=<?= $user['id'] ?>">Editar</a> |
+                        <a href="delete.php?id=<?= $user['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir este usuário')">Excluir</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
