@@ -26,6 +26,7 @@
                 <th>Descrição</th>
                 <th>Local</th>
                 <th>Capacidade</th>
+                <th>Ações</th>
             </tr>
 
             <?php foreach ($spaces as $space): ?>
@@ -34,6 +35,9 @@
                 <td><?= $space['description'] ?></td>
                 <td><?= $space['location'] ?></td>
                 <td><?= $space['capacity'] ?></td>
+                <td>
+                    <a href="edit.php?id=<?= $space['id'] ?>">Editar</a>
+                </td>
             </tr>
             <?php endforeach; ?>
         </table>
