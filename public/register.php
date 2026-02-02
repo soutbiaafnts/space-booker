@@ -7,7 +7,7 @@
     <title>Criar Usuário</title>
     <link rel="stylesheet" href="../assets/css/login/style.css">
 </head>
-<script src="../assets/js/users/create.js"></script>
+<script src="../assets/js/users/register.js"></script>
 
 <body>
     <main>
@@ -46,8 +46,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 </body>
-
 </html>

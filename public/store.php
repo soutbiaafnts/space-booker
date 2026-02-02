@@ -1,8 +1,8 @@
 <?php
-require_once "./config/database.php";
+require_once "../config/database.php";
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: create.php');
+    header('Location: register.php');
     exit;
 }
 
@@ -13,7 +13,7 @@ $password_rep = $_POST['password_rep'] ?? null;
 
 // validação básica
 if (!$name || !$email || !$password || !$password_rep) {
-    header('Location: create.php?error=empty');
+    header('Location: register.php?error=emptyFields');
     exit;
 }
 
@@ -25,7 +25,7 @@ try {
     $stmt->execute([$email]);
 
     if ($stmt->rowCount() > 0) {
-        header('Location: create.php?error=email');
+        header('Location: register.php?error=existentEmail');
         exit;
     }
 
@@ -44,10 +44,10 @@ try {
         $hashedPassword
     ]);
 
-    header('Location: list.php?success=1');
+    header('Location: dashboard.php?success=registered');
     exit;
 
 } catch (Exception $e) {
-    header('Location: create.php?error=internal');
+    header('Location: register.php?error=internal');
     exit;
 }

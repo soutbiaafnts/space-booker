@@ -24,7 +24,9 @@
                     <button type="submit" class="btn">Entrar</button>
                 </form>
                 <?php if (isset($_GET['error'])) { ?>
-                    <p>Email ou senha incorretos.</p>
+                    <script>
+                        alert("E-mail ou senha incorretos.");
+                    </script>
                 <?php } ?>
             </div>
 
@@ -32,16 +34,12 @@
                 <div class="toggle-panel">
                     <h1>Olá, bem-vindo!</h1>
                     <p>Não tem uma conta?</p>
-                    <a href="./create.php">
+                    <a href="./register.php">
                         <button class="btn register-btn">Cadastrar</button>
                     </a>
                 </div>
             </div>
         </div>
     </main>
-    <!-- <footer>
-        DEW I - Trabalho Final - Bianca Fontes
-    </footer> -->
 </body>
-
 </html>

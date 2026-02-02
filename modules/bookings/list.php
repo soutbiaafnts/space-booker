@@ -36,7 +36,7 @@ $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </header>
     <main>
         <?php if(empty($bookings)): ?>
-            <p>Você ainda não possui reservar</p>
+            <p>Você ainda não possui reservas</p>
         <?php else: ?>
             <table>
                 <tr>
