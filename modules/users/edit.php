@@ -32,29 +32,35 @@ if (!$user) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Usuário</title>
+    <title>Usuário</title>
+    <link rel="stylesheet" href="../../assets/css/form/form.css">
 </head>
 
 <body>
-    <header>
-        <h1>Editar meu Usuário</h1>
-    </header>
+    <?php require_once '../../includes/nav.php' ?>
     <main>
-        <form action="update.php" method="post">
-            <input type="hidden" name="id" value="<?= $user['id'] ?>">
+        <div class="container">
+            <div class="form-block">
+                <h1>Editar usuário</h1>
+                <form action="update.php" method="post">
 
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="name" value="<?= $user['name'] ?>" required><br><br>
+                    <div class="input-block">
+                        <input type="hidden" name="id" value="<?= $user['id'] ?>">
 
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" value="<?= $user['email'] ?>" required>
+                        <div class="input-box">
+                            <input type="text" placeholder="Seu nome" name="name" id="name" value="<?= $user['name'] ?>" required>
+                        </div>
 
-            <button type="submit">Editar</button>
-        </form>
+                        <div class="input-box">
+                            <input type="email" placeholder="Seu e-mail" name="email" id="email" value="<?= $user['email'] ?>" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Editar</button>
+                </form>
+            </div>
+        </div>
     </main>
-    <footer>
-        DEW I - Trabalho Final - Bianca Fontes
-    </footer>
 </body>
 
 </html>

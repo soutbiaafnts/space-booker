@@ -1,38 +1,48 @@
 <?php
-    require_once '../../includes/auth.php';
+require_once '../../includes/auth.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Espaço</title>
+    <title>Espaço</title>
+    <link rel="stylesheet" href="../../assets/css/form/form.css">
 </head>
+
 <body>
-    <header>
-        <h1>Crie um novo Espaço</h1>
-    </header>
+    <?php require_once '../../includes/nav.php' ?>
     <main>
-        <form action="store.php" method="post">
-            <label for="name">Nome do espaço</label>
-            <input type="text" name="name" id="name" required><br><br>
-            
-            
-            <label for="description">Descrição</label>
-            <textarea name="description" id="description"></textarea><br><br>
+        <div class="container">
+            <div class="form-block">
+                <h1>Criar espaço</h1>
 
-            <label for="location">Local</label>
-            <input type="text"  name="location" id="location"><br><br>
+                <form action="store.php" method="post">
+                    <div class="input-block">
+                        <div class="input-box">
+                            <input type="text" placeholder="Nome do espaço" name="name" id="name" required>
+                        </div>
 
-            <label for="capacity">Capacidade</label>
-            <input type="number" name="capacity" id="capacity"><br><br>
+                        <div class="input-box">
+                            <input type="text" name="description" placeholder="Descreva o espaço" id="description" required>
+                        </div>
 
-            <button type="submit">Salvar</button>
-        </form>
+                        <div class="input-box">
+                            <input type="text" placeholder="Local" name="location" id="location" required>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="number" placeholder="Capacidade" name="capacity" id="capacity" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Criar</button>
+                </form>
+            </div>
+        </div>
     </main>
-    <footer>
-        DEW I - Trabalho Final - Bianca Fontes
-    </footer>
 </body>
+
 </html>

@@ -27,36 +27,43 @@ if (!$space) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Espaço</title>
+    <title>Espaço</title>
+    <link rel="stylesheet" href="../../assets/css/form/form.css">
 </head>
 
 <body>
-    <header>
-        <h1>Editar Espaço</h1>
-    </header>
+    <?php require_once '../../includes/nav.php' ?>
     <main>
-        <form action="update.php" method="post">
-            <input type="hidden" name="id" value="<?= $space['id'] ?>">
+        <div class="container">
+            <div class="form-block">
+                <h1>Editar espaço</h1>
 
-            <label for="name">Nome do espaço</label>
-            <input type="text" name="name" id="name" value="<?= $space['name'] ?>" required><br><br>
+                <form action="update.php" method="post">
+                    <input type="hidden" name="id" value="<?= $space['id'] ?>">
 
+                    <div class="input-block">
+                        <div class="input-box">
+                            <input type="text" placeholder="Nome do espaço" name="name" id="name" value="<?= $space['name'] ?>" required>
+                        </div>
 
-            <label for="description">Descrição</label>
-            <textarea name="description" id="description"><?= $space['description'] ?></textarea><br><br>
+                        <div class="input-box">
+                            <input type="text" name="description" placeholder="Descreva o espaço" id="description" value="<?= $space['description'] ?>">
+                        </div>
 
-            <label for=" location">Local</label>
-            <input type="text" name="location" id="location" value="<?= $space['location'] ?>"><br><br>
+                        <div class="input-box">
+                            <input type="text" placeholder="Local" name="location" id="location" value="<?= $space['location'] ?>">
+                        </div>
 
-            <label for="capacity">Capacidade</label>
-            <input type="number" name="capacity" id="capacity" value="<?= $space['capacity'] ?>"><br><br>
+                        <div class="input-box">
+                            <input type="number" placeholder="Capacidade" name="capacity" id="capacity" value="<?= $space['capacity'] ?>">
+                        </div>
+                    </div>
 
-            <button type="submit">Atualizar</button>
-        </form>
+                    <button type="submit" class="btn">Atualizar</button>
+                </form>
+            </div>
+        </div>
     </main>
-    <footer>
-        DEW I - Trabalho Final - Bianca Fontes
-    </footer>
 </body>
 
 </html>
