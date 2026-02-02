@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #0072FF;
-    --medium-primary-color: #85c2ff;
+    --medium-primary-color: #f4faff;
     --light-primary-color: #dcecfc;
     --text-primary-color: #181818;
     --text-secondary-color: #333333;
@@ -22,7 +22,6 @@
 }
 
 body {
-    background: var(--light-primary-color);
     color: var(--text-secondary-color);
     
     display: flex;

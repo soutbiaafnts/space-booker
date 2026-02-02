@@ -25,50 +25,66 @@ $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Reservas</title>
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../../assets/css/table/table.css">
 </head>
-<body>
-    <header>
-        <h1>Minhas Reservas</h1>
-    </header>
-    <main>
-        <?php if(empty($bookings)): ?>
-            <p>Você ainda não possui reservas</p>
-        <?php else: ?>
-            <table>
-                <tr>
-                    <th>Espaço</th>
-                    <th>Data de reserva</th>
-                    <th>Horário de início</th>
-                    <th>Horário de encerramento</th>
-                    <th>Status</th>
-                    <th>Ações</th>
-                </tr>
 
-                <?php foreach ($bookings as $booking): ?>
+<body>
+    <?php require_once '../../includes/nav.php' ?>
+    <?php if (empty($bookings)): ?>
+        <main>
+            <div class="center-info">
+                <h1>Ops...</h1>
+                <p>Você ainda não possui reservas</p>
+            </div>
+        </main>
+    <?php else: ?>
+        <main class="container">
+            <div class="head">
+                <h1>Minhas reservas</h1>
+            </div>
+            <table class="table">
+                <thead>
                     <tr>
-                        <td><?= $booking['space_name'] ?></td>
-                        <td><?= $booking['booking_date'] ?></td>
-                        <td><?= $booking['start_time'] ?></td>
-                        <td><?= $booking['end_time'] ?></td>
-                        <td><?= $booking['status'] ?></td>
-                        <td>
-                            <?php if ($booking['status'] === 'active'): ?>
-                                <a href="cancel.php?id=<?= $booking['id'] ?>" 
-                                onclick="return confirm('Tem certeza que deseja cancelar esta reserva?')">
-                                    Cancelar
-                                </a>
-                            <?php else: ?>
-                                -
-                            <?php endif; ?>
-                        </td>
+                        <th>ID</th>
+                        <th>Espaço</th>
+                        <th>Data de reserva</th>
+                        <th>Horário de início</th>
+                        <th>Horário de encerramento</th>
+                        <th>Status</th>
+                        <th class="actions">Ações</th>
                     </tr>
-                <?php endforeach; ?>
+                </thead>
+
+                <tbody>
+                    <?php foreach ($bookings as $booking): ?>
+                        <tr>
+                            <td><?= $booking['id'] ?></td>
+                            <td><?= $booking['space_name'] ?></td>
+                            <td><?= $booking['booking_date'] ?></td>
+                            <td><?= $booking['start_time'] ?></td>
+                            <td><?= $booking['end_time'] ?></td>
+                            <td><?= $booking['status'] ?></td>
+                            <td class="actions">
+                                <?php if ($booking['status'] === 'active'): ?>
+                                    <a href="cancel.php?id=<?= $booking['id'] ?>"
+                                        onclick="return confirm('Tem certeza que deseja cancelar esta reserva?')">
+                                        <span class="delete">Cancelar</span>
+                                    </a>
+                                <?php else: ?>
+                                    -
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
             </table>
         <?php endif; ?>
-    </main>
+        </main>
 </body>
+
 </html>

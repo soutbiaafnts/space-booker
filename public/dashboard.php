@@ -26,7 +26,7 @@ $success = $_GET['success'] ?? null;
 </head>
 
 <body>
-    <?php require_once '../includes/nav.php' ?>
+    <?php require_once '../includes/navDash.php' ?>
     
     <main>
         <div class="center-info">

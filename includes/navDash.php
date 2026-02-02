@@ -1,6 +1,6 @@
 <?php require_once 'auth.php'; ?>
 
-<link rel="stylesheet" href="../../assets/css/nav/nav.css">
+<link rel="stylesheet" href="../assets/css/nav/nav.css">
 
 <nav class="sidebar">
     <header>
@@ -17,49 +17,49 @@
         <div class="menu">
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="../../public/dashboard.php">
+                    <a href="../public/dashboard.php">
                         <span class="text tex-nav">Início</span>
                     </a>
                 </li>
                 <h3>Usuário</h3>
                 <li class="nav-link">
-                    <a href="../users/list.php">
+                    <a href="../modules/users/list.php">
                         <span class="text tex-nav">Ver usuários</span>
                     </a>
                 </li>
 
                 <h3>Espaço</h3>
                 <li class="nav-link">
-                    <a href="../spaces/list.php">
+                    <a href="../modules/spaces/list.php">
                         <span class="text tex-nav">Ver espaços</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="../spaces/create.php">
+                    <a href="../modules/spaces/create.php">
                         <span class="text tex-nav">Criar espaço</span>
                     </a>
                 </li>
 
                 <h3>Reserva</h3>
                 <li class="nav-link">
-                    <a href="../bookings/listAll.php">
+                    <a href="../modules/bookings/listAll.php">
                         <span class="text tex-nav">Ver reservas</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="../bookings/list.php">
+                    <a href="../modules/bookings/list.php">
                         <span class="text tex-nav">Minhas reservas</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="../bookings/create.php">
+                    <a href="../modules/bookings/create.php">
                         <span class="text tex-nav">Reservar espaço</span>
                     </a>
                 </li>
 
                 <h3>Cuidado</h3>
                 <li class="nav-exit">
-                    <a href="../../public/logout.php" class="exit">
+                    <a href="../public/logout.php" class="exit">
                         <span class="text tex-nav">Sair</span>
                     </a>
                 </li>

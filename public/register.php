@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Usuário</title>
+    <title>Registrar</title>
     <link rel="stylesheet" href="../assets/css/login/style.css">
 </head>
 <script src="../assets/js/users/register.js"></script>
