@@ -32,7 +32,7 @@
 
             <div class="toggle-box">
                 <div class="toggle-panel">
-                    <h1>Olá, bem-vindo!</h1>
+                    <h1>Olá, bem-vindo(a)!</h1>
                     <p>Não tem uma conta?</p>
                     <a href="./register.php">
                         <button class="btn register-btn">Cadastrar</button>

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #0072FF;
+    --medium-primary-color: #85c2ff;
+    --light-primary-color: #dcecfc;
+    --text-primary-color: #181818;
+    --text-secondary-color: #333333;
+    --text-third-color: #888888;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira", sans-serif;
+}
+
+body {
+    background: var(--light-primary-color);
+    color: var(--text-secondary-color);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: white;
+}
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary-color);
+    transition: var(--tran-02);
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    padding: 8px;
+    color: var(--text-secondary-color);
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 8px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li a {
+    width: 100%;
+    height: 100%;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover {
+    background: var(--primary-color);
+}
+
+.sidebar li a:hover .text {
+    color: white;
+}
+
+.sidebar .nav-exit a:hover {
+    background: red;
+}
+
+.sidebar .nav-exit a .text {
+    color: red;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--text-third-color);
+}
+
+header .image-text .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.header-text .owner {
+    font-size: 18px;
+    margin-top: -6px;
+}
+
+.sidebar header .point {
+    position: absolute;
+    top: 50%;
+    right: -12%;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+}

@@ -38,7 +38,7 @@
 
             <div class="toggle-box">
                 <div class="toggle-panel">
-                    <h1>Bem-vindo de volta!</h1>
+                    <h1>Você voltou!</h1>
                     <p>Já tem uma conta?</p>
                     <a href="./login.php">
                         <button class="btn register-btn">Entrar</button>
