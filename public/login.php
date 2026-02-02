@@ -4,25 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Entrar</title>
+    <link rel="stylesheet" href="../assets/css/login/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Login</h1>
-    </header>
     <main>
-        <form action="login_process.php" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Entrar">
-        </form>
-        <a href="../modules/users/create.php">Não tem conta? Cadastre-se</a>
-        <?php if(isset($_GET['error'])) { ?>
-                <p>Email ou senha incorretos.</p>
-        <?php } ?>
+        <div class="container">
+            <div class="form-block">
+                <form action="login_process.php" method="post">
+                    <h1>Entrar</h1>
+                    <div class="input-box">
+                        <input type="email" placeholder="E-mail" id="email" name="email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Senha" id="password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="btn">Entrar</button>
+                </form>
+                <?php if (isset($_GET['error'])) { ?>
+                    <p>Email ou senha incorretos.</p>
+                <?php } ?>
+            </div>
+
+            <div class="toggle-box">
+                <div class="toggle-panel">
+                    <h1>Olá, bem-vindo!</h1>
+                    <p>Não tem uma conta?</p>
+                    <a href="./create.php">
+                        <button class="btn register-btn">Cadastrar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
+    <!-- <footer>
+        DEW I - Trabalho Final - Bianca Fontes
+    </footer> -->
 </body>
+
 </html>
