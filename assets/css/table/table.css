@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #0072FF;
+    --medium-primary-color: #f4faff;
+    --light-primary-color: #dcecfc;
+    --text-primary-color: #181818;
+    --text-secondary-color: #333333;
+    --text-third-color: #888888;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--light-primary-color);
+    color: var(--text-secondary-color);
+    
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    padding-top: 32px;
+    padding-left: 312px;
+    padding-bottom: 420px;
+    padding-right: 62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.container h1 {
+    margin-bottom: 32px;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.table th,
+.table td {
+    padding: 8px 24px;
+}
+
+.table tbody tr {
+    background-color: white;
+}
+
+.table .actions {
+    text-align: center;
+    gap: 2px;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: var(--medium-primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-secondary-color);
+}
+
+a .edit {
+    background: var(--primary-color);
+    padding: 1px 4px;
+    border-radius: 4px;
+    border: solid 2px var(--primary-color);
+    color: white;
+    transition: var(--tran-04);
+}
+
+a:hover .edit {
+    background: transparent;
+    padding: 1px 4px;
+    border-radius: 4px;
+    border: solid 2px var(--primary-color);
+    color: var(--primary-color);
+}
+
+a .delete {
+    background: red;
+    padding: 1px 4px;
+    border-radius: 4px;
+    border: solid 2px red;
+    color: white;
+    transition: var(--tran-04);
+}
+
+a:hover .delete {
+    background: transparent;
+    padding: 1px 4px;
+    border-radius: 4px;
+    border: solid 2px red;
+    color: red;
+}
+
+.center-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+}
+
+.center-info h1 {
+    font-size: 64px;
+}
+
+.center-info p {
+    font-size: 28px;
+}
