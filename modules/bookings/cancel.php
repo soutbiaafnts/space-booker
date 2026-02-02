@@ -23,9 +23,9 @@ try {
 
     $stmt->execute([$id, $user_id]);
 
-    header('Location: list.php');
+    header('Location: list.php?success=cancelled');
     exit;
 } catch (Exception $e) {
-    header('Location: list.php?error=1');
+    header('Location: list.php?error=internal');
     exit;
 }

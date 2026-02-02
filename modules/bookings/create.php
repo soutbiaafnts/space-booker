@@ -15,18 +15,12 @@ $spaces = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva</title>
     <link rel="stylesheet" href="../../assets/css/form/form.css">
+    <script src="../../assets/js/alerts.js"></script>
 </head>
 
 <body>
     <?php require_once '../../includes/nav.php' ?>
     <main>
-        <?php if (isset($_GET['error'])): ?>
-            <?php if ($_GET['error'] === 'conflict'): ?>
-                <p>Já existe uma reserva para esse espaço nesse horário.</p>
-            <?php elseif ($_GET['error'] === "internal"): ?>
-                <p>Ocorreu um erro ao tentar salvar a reserva.</p>
-            <?php endif; ?>
-        <?php endif; ?>
         <div class="container">
             <div class="form-block">
                 <h1>Reservar espaço</h1>
@@ -46,16 +40,16 @@ $spaces = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="input-box">
                             <input type="date" name="booking_date" id="booking_date">
                         </div>
-            
+
                         <div class="input-box">
-                            <input type="time"  name="start_time" id="start_time">
+                            <input type="time" name="start_time" id="start_time">
                         </div>
-                        
+
                         <div class="input-box">
                             <input type="time" name="end_time" id="end_time">
                         </div>
                     </div>
-                    
+
                     <button type="submit" class="btn">Reservar</button>
                 </form>
             </div>

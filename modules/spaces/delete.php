@@ -15,9 +15,9 @@ try {
     $stmt = $pdo->prepare("DELETE FROM spaces WHERE id = ?");
     $stmt->execute([$id]);
 
-    header('Location: list.php');
+    header('Location: list.php?success=deleted');
     exit;
 } catch (Exception $e) {
-    header('Location: list.php?error=1');
+    header('Location: list.php?error=internal');
     exit;
 }

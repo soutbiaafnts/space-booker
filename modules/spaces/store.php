@@ -14,7 +14,7 @@ $capacity = $_POST['capacity'] ?? null;
 
 // validação mínima
 if (empty($name)) {
-    header('Location: create.php?error=1');
+    header('Location: create.php?error=emptyName');
     exit;
 }
 
@@ -33,9 +33,9 @@ try {
         $capacity
     ]);
 
-    header('Location: list.php');
+    header('Location: list.php?success=created');
     exit;
 } catch (Exception $e) {
-    header('Location: create.php?error-1');
+    header('Location: create.php?error=internal');
     exit;
 }

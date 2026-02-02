@@ -23,11 +23,12 @@ $success = $_GET['success'] ?? null;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpaceBooker</title>
     <link rel="stylesheet" href="../assets/css/dashboard/style.css">
+    <script src="../assets/js/alerts.js"></script>
 </head>
 
 <body>
     <?php require_once '../includes/navDash.php' ?>
-    
+
     <main>
         <div class="center-info">
             <h1>Olá, <?= htmlspecialchars($user['name']) ?>!</h1>

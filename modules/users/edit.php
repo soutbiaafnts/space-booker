@@ -34,6 +34,7 @@ if (!$user) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuário</title>
     <link rel="stylesheet" href="../../assets/css/form/form.css">
+    <script src="../../assets/js/alerts.js"></script>
 </head>
 
 <body>

@@ -14,7 +14,12 @@ $start_time = $_POST['start_time'] ?? null;
 $end_time = $_POST['end_time'] ?? null;
 
 if (!$space_id || !$booking_date || !$start_time || !$end_time) {
-    header('Location: create.php?error=1');
+    header('Location: create.php?error=emptyFields');
+    exit;
+}
+
+if ($end_time <= $start_time) {
+    header('Location: create.php?error=invalidTime');
     exit;
 }
 
@@ -58,7 +63,7 @@ try {
         $end_time
     ]);
 
-    header('Location: list.php');
+    header('Location: list.php?success=created');
     exit;
 } catch (Exception $e) {
     header('Location: create.php?error=internal');

@@ -14,7 +14,7 @@ $location = $_POST['location'] ?? null;
 $capacity = $_POST['capacity'] ?? null;
 
 if (!$id || empty($name)) {
-    header('Location: list.php');
+    header('Location: list.php?error=emptyFields');
     exit;
 }
 
@@ -35,9 +35,9 @@ try {
         $id
     ]);
 
-    header('Location: list.php');
+    header('Location: list.php?success=updated');
     exit;
 } catch (Exception $e) {
-    header('Location: list.php?error=1');
+    header('Location: list.php?error=internal');
     exit;
 }

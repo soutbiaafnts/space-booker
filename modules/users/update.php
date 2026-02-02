@@ -32,7 +32,7 @@ try {
         $id
     ]);
 
-    header('Location: list.php?success=update');
+    header('Location: list.php?success=updated');
     exit;
 } catch (Exception $e) {
     header('Location: edit.php?id=$id&error=internal');

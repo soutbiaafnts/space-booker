@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar</title>
     <link rel="stylesheet" href="../assets/css/login/style.css">
+    <script src="../assets/js/users/register.js"></script>
+    <script src="../assets/js/alerts.js"></script>
 </head>
-<script src="../assets/js/users/register.js"></script>
 
 <body>
     <main>
@@ -48,4 +49,5 @@
         </div>
     </main>
 </body>
+
 </html>
